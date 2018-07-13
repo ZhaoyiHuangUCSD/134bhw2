@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>issue table</title>
+    <style>
+        table{
+            border: 1px solid black;
+            width:100%;
+            font-family: sans-serif;
+        }
+        tb,th,td{
+            border:1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+    </style>
+    
+    <script>
+    function addRow(){
+        var table= document.getElementById("mytable");
+        var row=table.insertRow();
+        var cell1=row.insertCell();
+        var cell2=row.insertCell();
+        var cell3 =row.insertCell();
+        var cell4=row.insertCell();
+        cell1.innerHTML="&nbsp";
+        cell2.innerHTML="&nbsp";
+        cell3.innerHTML="&nbsp";
+        cell4.innerHTML="&nbsp";
+    }
+    
+    </script>
+    </head>
+    <body>
+        <h1 id="top"><b>Issue List</b></h1>
+        <hr>
+        <nav>
+        <a href="#1">Heading and Sections</a>|
+        <a href="#2">Boiler Plate Text</a>|
+        <a href="#3">Images</a>|
+        <a href="#4">Media</a>|
+            <a href="#5">Iframe</a>|
+            <a href="#6">Forms</a>|
+            <a href="#7">Old Tags</a>  
+        </nav>
+        <br>
+        <button type="button"  onclick="addRow()">Add issue</button>
+       
+        <table id="mytable">
+        <tr>
+           <td>Issue Id</td>
+            <td>Issue Name</td>
+            <td>Issue Type</td>
+            <td>Issue Description</td>
+           </tr>
+           
+           <tr>
+           <td id="1">1</td>
+               <td>Heading and Sections</td>
+               <td>Heading and section type tags</td>
+               <td>Tags like &gt;h1 &lt; and &lt;section&gt; should be explored.</td>
+           </tr>
+           <tr>
+           <td id="2">2</td>
+               <td>Boiler Plate Text</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr>
+            
+           <tr>
+           <td id="3">3</td>
+               <td>Images</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr>
+        
+            <tr>
+           <td id="4">4</td>
+               <td>Media</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr>
+          
+            <tr>
+           <td id="5">5</td>
+               <td>Iframe</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr> 
+           
+            <tr>
+           <td id="6">6</td>
+               <td>Forms</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr>
+           
+            <tr>
+           <td id="7">7</td>
+               <td>Old Tags</td>
+               <td>asdsdf</td>
+               <td>gfgfgf</td>
+           </tr>
+        </table>
+    
+        <p align="right"><a  href="#top">go to top</a></p>
+    <footer>
+        <hr>
+        <header>Copyright: &copy;gdjaodjla</header>
+        </footer>
+    </body>
+
+</html>
