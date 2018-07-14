@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>Embedded content issue</title>
+    <style>
+        table,th,td{
+            border:1px solid black;
+            
+        }
+    
+    </style>
+</head>
+    <body>
+        <h2>This is all about embed elements</h2>
+        <h3> Here is a table of content in this page</h3>
+        <table>
+        <colgroup>
+            <col span="2">
+            </colgroup>
+            <tr>
+                <th>Number</th>
+                <th>elements</th>
+            </tr>
+            <tr>
+            <td>1</td>
+                <td>iframe</td>
+            </tr>
+            <tr>
+            <td>2</td>
+                <td>embed objects</td>
+            </tr>
+            <tr>
+            <td>3</td>
+                <td>video</td>
+            </tr>
+            <tr>
+            <td>4</td>
+                <td>audio</td>
+            </tr>
+            <tr>
+            <td>5</td>
+                <td>map</td>
+            </tr>
+        </table>
+        <h4>This is a example of setting iframe</h4>
+        <iframe src="https://www.ucsd.edu" width="1000px">Browser don't support iframe</iframe>
+        <br>
+        <h4>normal embed elements</h4>
+        <embed src="http://condor.depaul.edu/sjost/hci430/flash-examples/swf/snow.swf">
+        <h4>object embeded</h4>
+        <object width="300" data="http://condor.depaul.edu/sjost/hci430/flash-examples/swf/sunAndShadow.swf">Browser don't support</object>
+        
+        <h4>show some video</h4>
+        <object data="img/aa.mp3"><param name="autoplay" value="true"></object><br>
+        <video width="320" height="240" controls>
+            <source src="img/bb.mp4" type="video/mp4">
+            <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default>
+            Your browser don't support video tag
+        </video>
+        
+        <h5>show some audio:</h5>
+        <audio controls>
+            <source src="img/aa.mp3">
+        </audio>
+        
+        <h6>show the a map of image</h6>
+        <figure>
+        <img src="img/issue-logo.png" usemap="backbutton" width="200" height="200">
+        <map name="backbutton">
+        <area shape="rect" coords="50,50,100,200" href="issue-table.html" alt="go back to form">
+        </map>
+        </figure>
+    </body>
+
+
+
+</html>
