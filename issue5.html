@@ -1,0 +1,53 @@
+<!-- Elements used in this page: html, head, meta, title, body, h1, em, h2, strong, small, p, abbr, br, dfn,cite,ruby, rb, rtc, rt, rp ,time,code, samp,kbd,var,sub, sup,i,b, mark,wbr, bdi,bdo, span, br -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>text tags</title>
+    </head>
+    <body>
+    <h1> The elements <em>related to text</em></h1>
+    
+    <h2> Here are something you can <strong>play on text</strong>,These are the tags you can use</h2>
+    <small>Like abbrevation</small>
+        <p>abbr: The abbrevation element used for show element that is abbrevated</p>
+        <p>The <abbr title="World Trade Organization">WTO</abbr> was founded back in the 50s</p>
+    <br>
+        
+    <small>dnf: a element define something</small>
+        <p><dfn>HTML</dfn> is the standard markup language for creating web pages.</p><br>
+        <small> cite: a element showing the words to be cited</small>
+        <p><cite>I came, I saw, I conquered.</cite> by Julius Caesar</p><br>
+        
+    <small>ruby, rb,rt,rp : ruby can be used to add small extra text above the main text and useful for notations. rb is sub tag used for main element and rt used for that extra text, rp is sued to provide fallback text for users can't display ruby</small><br>
+    <ruby>
+        <rb>風</rb><rtc><rt>ㄈㄥ</rt></rtc> 
+        </ruby>
+        <br>
+        <ruby><rb>馬</rb><rp>(</rp><rt>ㄥ</rt><rp>)</rp></ruby>
+       <br> 
+    <small>data: data is a element that translate text into something machine readable.</small> 
+        <p><data value="200212">Cherry</data></p>
+        
+        <small>Time: time element is for the string of valid time string</small><br>
+        <time>2011-11-18T14:54+0000</time>
+        
+        <h4>There are also some phrase tags define certain phrases like code, samp, kbd</h4>
+        <p>code: define computer code like <code> function(int a)</code></p>
+        <p>samp: sample output from program like <samp>a=5</samp></p>
+        <kbd>kbd: keyboard input</kbd><br>
+        <p>var: define variables like <var>a</var>,<var>b</var></p>
+        <p> There is another element sub  or sup to let you represent variables with sub text like <var>x<sub>1</sub></var> and<var>x<sup>2</sup></var> </p>
+        
+        <h4> Something useful in a paragraph</h4>
+        <p> You can emphasize text in a certain block using element i, b, mark</p>
+        <p>Here is <i>a example using i</i>, Then here is  <b>a example using b</b> and here is <mark>a example using mark.</mark> </p>
+        <p> And sometimes you need special <wbr>element like bdi to handle <wbr>bidirectional text formatting. bdi represents a span of text to be seperate from others </p>
+        <!-- bdi is not supported in all browsers-->
+        <p> Here is a example using dbi <bdi>إيان</bdi> If the element is not used, the formatting will be a mess</p>
+        <p>You can also use element bdo to write soemthing <u>directionally</u>, for instance, "Juice" will become "<bdo dir=rtl>Juice</bdo>"</p>
+        
+        <p> You can also format a paragraph using the span element, and add attribute to it. span don't have visual effect  <br>In French we call it <span lang="fr">sirop de sureau</span>. </p>
+    </body>
+</html>

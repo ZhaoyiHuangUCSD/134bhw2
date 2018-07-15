@@ -1,0 +1,116 @@
+<!-- This page includes tags: html, head, meta, title, style, table, thead, tr, td, body, h1, h3, caption,tbody, tfoot,meter,br,progress, fieldset,em,u,legend,form, select,option, p,small,label, button, strong, optgroup, select,details, summary,textarea, dialog-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>form issues</title>
+    <style>
+        table, thead,tr,td{
+            border: 1px solid black;
+        }
+    </style>
+    </head>
+    <body>
+    <h1>Issue name: Forms</h1>
+    <h3>Issue type: things related to forms, input tags and table</h3> 
+        
+        <table>
+        <caption>table of contents</caption>
+            <thead>
+            <tr>
+                <th>content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>progress, fieldset, legend, and meter</td></tr>
+                <tr><td>using datalist and select to get birthday</td></tr>
+                <tr><td>example using label</td></tr>
+                <tr><td>using optgroup element for selection</td></tr>
+                <tr><td>using form input and output to do calculation</td></tr>
+                <tr><td>using text area</td></tr>
+                <tr><td>the dialog box</td></tr>
+            </tbody>
+            <tfoot><tr><th>The end of table</th></tr></tfoot>
+        </table>
+        <br>
+        <form>
+        <meter value="0.6">60%</meter> 
+        <fieldset>
+
+            <legend>Peronsal information</legend>
+            Name:<input type="text"><br>
+            Birthday:<input type="text"><br>
+            </fieldset>
+            <em><u>The gaudge above can be changed to progress bar like this</u></em><br>
+            <progress value="0.6">60%</progress>
+            <br>
+        </form>
+            <p> There is another way to get birthday, using datalist element</p><br>
+            <form action="#" method="get">
+                Year:<select>
+                <option value="2018">2018</option>
+                 <option value="2017">2017</option>
+                 <option value="2016">2016</option>
+                 <option value="2015">2015</option>
+                 <option value="2014">2014</option>
+                 <option value="2013">2013</option>
+                </select>
+            <input list = "month" name="month">
+                <datalist id="month">
+                <option value ="Jan">
+                <option value ="Feb">    
+                <option value ="Mar">
+                <option value ="Apr">
+                <option value ="May">
+                <option value ="Jun">
+                <option value ="Jul"> 
+                <option value ="Aug">
+                <option value ="Sept">
+                <option value ="Oct">
+                 <option value ="Nov">
+                  <option value ="Dec">   
+                </datalist>
+                <input type="submit">
+            </form>
+            
+            <p>for better functionality of the form,you can also use label to indicate text so mouse can click on the text for choice</p>
+            
+            <form>
+                <small>gender information</small><br>
+                 <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male"><br>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female"><br>
+                <button type="reset">Reset</button>
+                       </form>
+            
+            <p> For selections, you can group elements together under the drop down part, for example:</p>
+            <strong>Your favoraite car:</strong>
+            <select>
+                <optgroup label="below $30000">
+                <option value="camery">camery</option>
+                    <option value="civic">civic</option>
+                </optgroup>
+                
+                <optgroup label="greater than $30000">
+                    <option value="M5">M5</option>
+                    <option value="C63">C63</option>
+                </optgroup>
+            </select>
+            
+            
+            <p>You can use the form to do calculations using output tag</p>
+            <form  oninput="x.value=parseInt(a.value)+parseInt(b.value)" >
+            <input type="number" id="a" value="50">+<input type="number" id="b" value="100">=<output name="x"></output>
+            </form>
+            <details>
+            <summary>This page explore the forms and how it can be formated.(click on arrow to see something more) </summary>
+                <p>any response are welcome!</p>
+                <textarea rows="4" cols="50">&nbsp;</textarea>
+            </details>
+        
+    <!-- dialog is not supportted in all browsers -->
+    <dialog open><p> Greetings! This is a dialog box</p></dialog> 
+    </body>
+</html>
