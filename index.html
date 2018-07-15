@@ -1,25 +1,35 @@
+<!-- Tag used: html, head, meta, title, body, marquee, h1, h2, form, input, b input, button, br, label, a,img,figure-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>login page</title>
+    <style>
+        #top{
+            border:2px solid black;
+            text-align: center;
+        }
+    </style>
 </head>
     
     <body>
     <!--Marquee is not html5 tag, so validator does not support it. There is error 
         message show up when we check marquee through validator-->
     <marquee direction="left">Welcome</marquee>
-    <h1 id="top"> ------Welcome to the issue tracker--------</h1>
-    <h2> This is a issue tracker</h2>
+    <h1 id="top"> Welcome to the issue tracker</h1>
+    <h4> This is a issue tracker by group Neko</h4>
         <form action="add.html" method="get">
             <b>User Name</b><br>
-        <input type="text" name="username"><br>
+        <input type="text" name="username" placeholder="Enter User name" required><br>
             <b>Password</b> <a href="404.html">forget password?</a><br>
-            <input type="password" name="password"><br>
-            <p>&nbsp;</p>
+            <input type="password" name="password" placeholder="Enter password" required>
+             <br>
             <button type="submit">Sign in</button>
-            <br>
+            <hr>
+            <figure>
+        <img src="img/issue.png" alt="issue icon" width="50" height="50">
+        </figure>
             <label>New to tracker?</label>
             <a href="404.html">Create an account</a>
         
