@@ -1,51 +1,95 @@
+<!-- Tag used: html, head, meta, title, template, style, body, h2, h3, h4, h5, h6, table, colgroup, tr, th, td, tbody, tfoot, img, map, area, figure, applet, canvas, script, noscript, ins, del-->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>Embedded content issue</title>
+
+    <template>
+        
+            <p>It's a simple tamplate</p>
+    
+    </template>
+    
     <style>
         table,th,td{
             border:1px solid black;
-            
         }
+        canvas { 
+            border: 1px solid black; 
+        }
+
+        p{
+            font-size: 20px;
+        }  
+        
     
     </style>
 </head>
     <body>
         <h2>This is all about embed elements</h2>
         <h3> Here is a table of content in this page</h3>
-        <table>
-        <colgroup>
-            <col span="2">
-            </colgroup>
-            <tr>
-                <th>Number</th>
-                <th>elements</th>
-            </tr>
-            <tr>
-            <td>1</td>
-                <td>iframe</td>
-            </tr>
-            <tr>
-            <td>2</td>
-                <td>embed objects</td>
-            </tr>
-            <tr>
-            <td>3</td>
-                <td>video</td>
-            </tr>
-            <tr>
-            <td>4</td>
-                <td>audio</td>
-            </tr>
-            <tr>
-            <td>5</td>
-                <td>map</td>
-            </tr>
-        </table>
+        <table>     
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                    
+                    <tr>
+                        <th>Number</th>
+                        <th>elements</th>
+                    </tr>       
+                    <tbody>
+                    <tr>
+                    <td>1</td>
+                        <td>iframe</td>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                        <td>embed objects</td>
+                    </tr>
+                    <tr>
+                    <td>3</td>
+                        <td>video</td>
+                    </tr>
+                    <tr>
+                    <td>4</td>
+                        <td>audio</td>
+                    </tr>
+                    <tr>
+                    <td>5</td>
+                        <td>map</td>
+                    </tr>
+                    <tr>
+                    <td>6</td>
+                        <td>applet</td>
+                    </tr>
+                    <tr>
+                    <td>7</td>
+                        <td>canvas</td>
+                    </tr>  
+                    <tr>
+                    <td>8</td>
+                        <td>ins/del</td>
+                    </tr>                                     
+                    </tbody>
+                    
+                  
+        
+                    <tfoot>
+                        <tr>
+                            <td>
+                            Total number:7
+                            </td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+        
+        
+                </table>
+
         <h4>This is a example of setting iframe</h4>
-        <iframe src="https://www.ucsd.edu" width="1000px">Browser don't support iframe</iframe>
+        <iframe src="https://www.ucsd.edu" width="1000"></iframe>
         <br>
         <h4>normal embed elements</h4>
         <embed src="http://condor.depaul.edu/sjost/hci430/flash-examples/swf/snow.swf">
@@ -67,11 +111,38 @@
         
         <h6>show the a map of image</h6>
         <figure>
-        <img src="img/issue-logo.png" usemap="backbutton" width="200" height="200">
+        <img src="img/issue-logo.png" usemap="#backbutton" width="200" height="200" alt="">
         <map name="backbutton">
         <area shape="rect" coords="50,50,100,200" href="issue-table.html" alt="go back to form">
         </map>
         </figure>
+
+        
+        <h6>using applet</h6>
+        <!--Applet is not html5 tag, so validator does not support it. 
+        Chrome, Firefox, Opera and IE cannot support it because this tag is removed.
+        Safari can show the frame of applet. But, due to security issue, it cannot show
+        the context of applet.-->
+        <applet code="src/helloWorld.class" width="300" height="300">
+        </applet>
+
+        <h6>using canvas</h6>
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+
+        <script>
+
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "rgb(200,0,0)";
+            ctx.fillRect (10, 10, 55, 50);
+        </script>
+
+        <noscript>
+            <p>javascript required</p>
+        </noscript>
+
+        <h6>using ins/del</h6>
+        <p id="p">My favorite food is <del>hamburger</del> <ins>tomato</ins>!</p> 
     </body>
 
 
