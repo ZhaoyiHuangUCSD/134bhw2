@@ -101,21 +101,21 @@
         <object width="300" data="img/cc.swf">Browser don't support</object>
         
         <h4>show some video</h4>
-        <object data="img/aa.mp3"><param name="autoplay" value="true"></object><br>
+        <object data="./img/aa.mp3"><param name="autoplay" value="true"></object><br>
         <video width="320" height="240" controls>
-            <source src="img/bb.mp4" type="video/mp4">
+            <source src="./img/bb.mp4" type="video/mp4">
             <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default>
             Your browser don't support video tag
         </video>
         
         <h5>show some audio:</h5>
         <audio controls>
-            <source src="img/aa.mp3">
+            <source src="./img/aa.mp3">
         </audio>
         
         <h6>show the a map of image</h6>
         <figure>
-        <img src="img/issue-logo.png" usemap="#backbutton" width="200" height="200" alt="Your browser doesn't support this image.">
+        <img src="./img/issue-logo.png" usemap="#backbutton" width="200" height="200" alt="Your browser doesn't support this image.">
         <map name="backbutton">
         <area shape="rect" coords="50,50,100,200" href="issue-table.html" alt="go back to form">
         </map>
@@ -127,7 +127,7 @@
         Chrome, Firefox, Opera and IE cannot support it because this tag is removed.
         Safari can show the frame of applet. But, due to security issue, it cannot show
         the context of applet. The way to solve it is use object tag instead of applet tag-->
-        <applet code="src/helloWorld.class" width="300" height="300">
+        <applet code="./src/helloWorld.class" width="300" height="300">
         </applet>
 
         <h6>using canvas</h6>
