@@ -7,8 +7,7 @@
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>issue table</title>
     <style>
-        @media
-        table{
+        @media table {
             border: 1px solid black;
             width:100%;
             font-family: sans-serif;
@@ -23,7 +22,7 @@
         }
 
         #close{
-            
+            text-align: right;
         }
     </style>
     
@@ -42,7 +41,7 @@
     }
         
      function deleteIssue(){
-            confirm("You sure you want to delete? COFIRM TO CONTINUE")
+            confirm("You sure you want to delete? CONFIRM TO CONTINUE")
             var r=prompt("Enter the issue id you want to delete");
             if(r>0){
                 document.getElementById("mytable").deleteRow(r);
@@ -85,7 +84,7 @@
         </nav>
         <br>
         <button type="button"  onclick="addRow()">Add issue</button>
-       <button type="button"  onclick="deleteIssue()">delete issue</button>
+       <button type="button"  onclick="deleteIssue()">Delete issue</button>
         
         <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>
         
