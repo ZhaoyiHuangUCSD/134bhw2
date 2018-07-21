@@ -22,15 +22,45 @@
        <figure>
             <img src="small-cat-breeds.jpg" alt="small neko">
                 <figcaption>A image about cat</figcaption>
-            </figure>
+        </figure>
         
         <p>Or we can use picture with soruce tags to display image</p>
+        <p>Showing jpg format</p>
         <picture>
         <source srcset="Anime_cats.jpg">
             <img src="small-cat-breeds.jpg" alt="original cats">
         </picture>
         
-        
+        <p>Showing jpeg format</p>
+        <picture>
+                <img src="/img/issue-subject.jpeg" alt="subject to issue">
+        </picture>
+
+        <p>Showing gif format</p>
+        <picture>
+                <img src="/img/job.gif" alt="job issue">
+        </picture>
+
+        <p>Showing png format</p>
+        <picture>
+                <img src="/img/issue.png" alt="issue logo">
+        </picture>
+
+        <p>Showing webP format</p>
+        <picture>
+                <img src="/img/tropical-sunrise.webp" alt="tropical sunrise" width="800" height="500">
+        </picture>
+
+        <p>Showing svg format</p>
+        <small>We can draw svg through svg tag</small><br>
+        <svg width="400" height="100">
+            <rect width="400" height="100" style="fill:rgb(0,256,0);stroke-width:10;stroke:rgb(0,0,0)" />
+        </svg><br>
+
+        <small>Or we can use svg type image from online source</small><br>
+        <picture>
+            <img src="/img/animals-1782013.svg" alt="two cats" width="500" height="300">
+        </picture>
     </body>
 
 </html>
