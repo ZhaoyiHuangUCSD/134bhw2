@@ -1,0 +1,33 @@
+/* This is the style sheet for CSS*/
+@media print{
+img{
+    max-width: 100%;
+}
+@page{
+    margin:0.5cm;
+}
+table{
+    page-break-inside: avoid;
+}
+h1,h2,h3,h4,h5,h6{
+    page-break-after:avoid; 
+     page-break-inside:avoid;
+}
+img{
+    page-break-inside: avoid;
+     page-break-after:avoid;
+}
+ul, ol, dl  { page-break-before:avoid; }
+
+iframe{
+    display: none;
+    width:0 !important;
+    height: 0 !important;    
+}
+footer{
+    content: "Create by Neko"
+        color:#FF0000 !important;
+        font-size: 1em;
+        padding-top: 30px
+}
+}
