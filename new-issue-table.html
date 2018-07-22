@@ -12,7 +12,7 @@
             font-family: 'PT Serif', serif;
         }
         table {
-            border: 1px solid black;
+            /*border: 1px solid black;*/
             width:100%;
             font-family: sans-serif;
         }
@@ -27,6 +27,11 @@
 
         #close{
             text-align: right;
+        }
+
+        .b{
+            border: none !important;
+            background-color: white;
         }
     </style>
     
@@ -90,10 +95,9 @@
             <a href="#5">text</a> 
         </nav>
         <br>
-        <form action="./add.html" style="float: left;">
+        <form action="./add.html" style="float: right;">
             <button type="submit"  onclick="addRow()">Add issue</button>
         </form>
-       <button type="button"  onclick="deleteIssue()">Delete issue</button>
         
         <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>
         
@@ -111,7 +115,8 @@
                <td><a href="./issue.html">Sections</a></td>
                <td>Sections and formatting related tags</td>
                <td>Exploring tags related to sections like &lt;aside&gt; and &lt;article&gt;; we also explore headings</td>
-           </tr>
+               <td class="b"><input type="button" value="&times" onclick="deleteIssue(this)"></td>
+            </tr>
            <tr id="2" name="close">
            <td >2</td>
                <td><a href="./issue2.html">Image</a></td>
