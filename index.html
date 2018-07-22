@@ -33,16 +33,21 @@
             border: 1px solid #f1f1f1;
             margin-bottom: 25px; 
         }
+        #topimage{
+            text-align: center;
+        }
+        
+        #top{
+            text-align: center;
+        }
         
     </style>
 </head>
     
     <body>
-    <!--Marquee is not html5 tag, so validator does not support it. The validator detects
-        error wherever you put marquee tag: inside or outside head tag,inside or outside 
-        body tag. The way to solve it is using javascript to animate the same effect in
-        html5-->
-    <marquee direction="left">Welcome</marquee>
+    <div id="topimage">
+        <img src="img/logo.svg" width="100px" height="100px" alt="tracker logo"title="This image created by group Neko">
+        </div>
     <h1 id="top"> Welcome to the issue tracker</h1>
     <h4> This is a issue tracker by group Neko</h4>
         <form action="./issue-table.html" method="get">
