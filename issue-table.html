@@ -5,15 +5,11 @@
     <link rel="stylesheet" href="./src/printstyle.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./src/mobile.css" type="text/css" media="mobile"/>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
-    <title>Issue Table</title>
+    <title>issue table</title>
     <style>
-        body{
-            font-family: 'PT Serif', serif;
-        }
-        table {
-            border: 1px solid black;
+        
+        table{
             width:100%;
             font-family: sans-serif;
         }
@@ -26,30 +22,24 @@
             text-align: right;
         }
 
-        #close{
-            text-align: right;
+        tr[name="close"]{
+            background-color: lightgrey;
+            font-style: italic;
+        }
+        
+        .b{
+            border: none !important;
+            background-color: white;
         }
     </style>
     
     <script>
-    function addRow(){
-        var table= document.getElementById("mytable");
-        var row=table.insertRow();
-        var cell1=row.insertCell();
-        var cell2=row.insertCell();
-        var cell3 =row.insertCell();
-        var cell4=row.insertCell();
-        cell1.innerHTML="&nbsp";
-        cell2.innerHTML="&nbsp";
-        cell3.innerHTML="&nbsp";
-        cell4.innerHTML="&nbsp";
-    }
         
-     function deleteIssue(){
-            confirm("You sure you want to delete? CONFIRM TO CONTINUE")
-            var r=prompt("Enter the issue id you want to delete");
-            if(r>0){
-                document.getElementById("mytable").deleteRow(r);
+     function deleteIssue(r){
+            var x=confirm("If you want to delete the issue, confirm");
+            if(x==true){
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("mytable").deleteRow(i);
             }
         }
         
@@ -79,6 +69,7 @@
     <noscript>
         <p>Your browser doesn't support Javascript. Please enable for optimal view.</p>
     </noscript>
+    
     </head>
     <body>
         <h1 id="top"><b>Issue List</b></h1>
@@ -91,12 +82,14 @@
             <a href="#5">text</a> 
         </nav>
         <br>
-        <form action="./add.html" style="float: left;">
-            <button type="submit"  onclick="addRow()">Add issue</button>
-        </form>
-       <button type="button"  onclick="deleteIssue()">Delete issue</button>
         
-        <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>
+        
+        
+        
+        <form action="./add.html" style="float: right">
+            <button type="submit">Add issue</button>
+        </form>
+        <input type="checkbox" id="chop" onchange="showOpen();"/>Open issues only<br>
         
         <div style="overflow-x:auto;">
         <table id="mytable">
@@ -109,34 +102,36 @@
            
            <tr id="1" name="open" >
            <td >1</td>
-               <td><a href="./issue.html">Sections</a></td>
+               <td><a href="issue.html">Sections</a></td>
                <td>Sections and formatting related tags</td>
-               <td>Exploring tags related to sections like &lt;aside&gt; and &lt;article&gt;; we also explore headings</td>
+               <td>Explore tags related to sections like &lt;aside&gt; and &lt;article&gt; we also explore headings</td>
+               <td class="b"><input type="button" value="&times" onclick="deleteIssue(this)"></td>
            </tr>
            <tr id="2" name="close">
            <td >2</td>
-               <td><a href="./issue2.html">Image</a></td>
+               <td><a href="issue2.html">Image</a></td>
                <td>Image related tags</td>
                <td>Exploring tags related to images, using tags like &lt;pictures&gt;</td>
            </tr>
             
            <tr id="3" name="close">
            <td >3</td>
-               <td><a href="./issue3.html">Media</a></td>
+               <td><a href="issue3.html">Media</a></td>
                <td>Media related tags</td>
-               <td>Exploring media inside the webpage(besides images); elements explored includes iframe, video, and image map</td>
+               <td>Exploring media inside the webpage(besides images), elements explored includes iframe, video, and image map</td>
            </tr>
         
             <tr id="4" name="open">
            <td >4</td>
-                <td><a href="./issue4.html">Forms and table</a></td>
+                <td><a href="issue4.html">Forms and table</a></td>
                <td>Tags related to forms and table</td>
                <td>Exploring tags related to table, and form. Creating tables and forms from those</td>
+                
            </tr>
           
             <tr id="5" name="close">
            <td >5</td>
-                <td><a href="./issue5.html">Inline text tags</a></td>
+                <td><a href="issue5.html">Inline text tags</a></td>
                <td>Inline tags exploration</td>
                <td>Exploring inline text</td>
            </tr> 
