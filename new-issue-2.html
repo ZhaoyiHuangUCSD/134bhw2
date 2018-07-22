@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'PT Serif', serif;
+        }
+        label{
+            color:orangered;
+        }
+        hr{
+            border-width: 1px;
+            display:flex;
+            border-style: groove;
+        }
+        .close{
+            border:1px solid lightgrey;
+            padding: 3px;
+            margin:10px;
+        }
+    </style>
+    <title> Not declared encoding</title>
+    </head>
+    
+<body>
+    <h1> Issue Name: Not valid encoding</h1>
+    <h2> Issue Type: Error</h2>
+    <h2> Issue Description:</h2>
+    <p> Trying to validate a simple html file  and write things in head like this:<br>
+        <code>&lt;head&gt;<br>
+            &lt;title&gt; test &lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+        </code>
+ But get error message of: The character encoding was not declared. Proceeding using windows-1252. </p>
+    
+    <img src="img/errorcode.jpeg" alt="issue file" width="50%">
+    <br>
+        <b>Issue level:</b><label> High</label>
+    
+    <div class="close">
+    <p>This issue has been resolved.</p>
+        <p><b>Solution:</b> Input the line "&lt;meta charset="UTF-8"&gt;" to give a valid encoding of the file. Or the validator can't get it.</p>
+    </div>
+    
+        <hr>
+    <footer>
+            <small><i>Issue found by Group Neko</i></small>
+        </footer>
+    </body>
+</html>
