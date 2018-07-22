@@ -90,7 +90,9 @@
             <a href="#5">text</a> 
         </nav>
         <br>
-        <button type="button"  onclick="addRow()">Add issue</button>
+        <form action="./add.html" style="float: left;">
+            <button type="submit"  onclick="addRow()">Add issue</button>
+        </form>
        <button type="button"  onclick="deleteIssue()">Delete issue</button>
         
         <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>

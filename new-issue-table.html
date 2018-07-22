@@ -1,0 +1,163 @@
+<!--Tag used: html, head, link, meta, title, style, script, body, h1, hr, nav, br, button,b, a, table, td, tr, p, footer, address-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./src/printstyle.css" type="text/css" media="print" />
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>Issue Table</title>
+    <style>
+        body{
+            font-family: 'PT Serif', serif;
+        }
+        table {
+            border: 1px solid black;
+            width:100%;
+            font-family: sans-serif;
+        }
+        tb,th,td{
+            border:1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        #bottom{
+            text-align: right;
+        }
+
+        #close{
+            text-align: right;
+        }
+    </style>
+    
+    <script>
+    function addRow(){
+        var table= document.getElementById("mytable");
+        var row=table.insertRow();
+        var cell1=row.insertCell();
+        var cell2=row.insertCell();
+        var cell3 =row.insertCell();
+        var cell4=row.insertCell();
+        cell1.innerHTML="&nbsp";
+        cell2.innerHTML="&nbsp";
+        cell3.innerHTML="&nbsp";
+        cell4.innerHTML="&nbsp";
+    }
+        
+     function deleteIssue(){
+            confirm("You sure you want to delete? CONFIRM TO CONTINUE")
+            var r=prompt("Enter the issue id you want to delete");
+            if(r>0){
+                document.getElementById("mytable").deleteRow(r);
+            }
+        }
+        
+        function showOpen(){
+            var open = document.getElementById("chop");
+            
+            if(open.checked){
+            
+                tooglepart(true);
+            }else{
+                
+               tooglepart(false);
+            }
+            
+        
+            }
+        
+          function tooglepart(on){
+              var lst=document.getElementsByName("close");
+            for (var i=0;i<lst.length;++i){
+                lst[i].style.display=on?'none':'';
+              
+          }  
+          }
+
+    </script>
+    <noscript>
+        <p>Your browser doesn't support Javascript. Please enable for optimal view.</p>
+    </noscript>
+    </head>
+    <body>
+        <h1 id="top"><b>Issue List</b></h1>
+        <hr>
+        <nav>
+        <a href="#1">Sections related</a>|
+        <a href="#2">Images</a>|
+        <a href="#3">Media</a>|
+        <a href="#4">Forms</a>|
+            <a href="#5">text</a> 
+        </nav>
+        <br>
+        <form action="./add.html" style="float: left;">
+            <button type="submit"  onclick="addRow()">Add issue</button>
+        </form>
+       <button type="button"  onclick="deleteIssue()">Delete issue</button>
+        
+        <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>
+        
+        <div style="overflow-x:auto;">
+        <table id="mytable">
+        <tr>
+           <td>Issue Id</td>
+            <td>Issue Name</td>
+            <td>Issue Type</td>
+            <td>Issue Description</td>
+           </tr>
+           
+           <tr id="1" name="open" >
+           <td >1</td>
+               <td><a href="./issue.html">Sections</a></td>
+               <td>Sections and formatting related tags</td>
+               <td>Exploring tags related to sections like &lt;aside&gt; and &lt;article&gt;; we also explore headings</td>
+           </tr>
+           <tr id="2" name="close">
+           <td >2</td>
+               <td><a href="./issue2.html">Image</a></td>
+               <td>Image related tags</td>
+               <td>Exploring tags related to images, using tags like &lt;pictures&gt;</td>
+           </tr>
+            
+           <tr id="3" name="close">
+           <td >3</td>
+               <td><a href="./issue3.html">Media</a></td>
+               <td>Media related tags</td>
+               <td>Exploring media inside the webpage(besides images); elements explored includes iframe, video, and image map</td>
+           </tr>
+        
+            <tr id="4" name="open">
+           <td >4</td>
+                <td><a href="./issue4.html">Forms and table</a></td>
+               <td>Tags related to forms and table</td>
+               <td>Exploring tags related to table, and form. Creating tables and forms from those</td>
+           </tr>
+          
+            <tr id="5" name="close">
+           <td >5</td>
+                <td><a href="./issue5.html">Inline text tags</a></td>
+               <td>Inline tags exploration</td>
+               <td>Exploring inline text</td>
+           </tr>
+           <tr id="6" name="open">
+               <td>6</td>
+               <td><a href="./new-issue.html">New Issue Placeholder</a></td>
+               <td>Your New Issue Under Review</td>
+               <td>We have accepted your submission(s)! Our team will go over the issue(s) you added and post it here in due time!</td>
+           </tr> 
+           
+        </table>
+        </div>
+            
+        <p id="bottom"><a  href="#top">go to top</a></p>
+    <footer>
+        <hr>
+        Copyright: &copy; Group Neko
+        <address>
+        9600 Gilman Drive<br> 
+        La Jolla, CA 92093<br>
+        </address>
+        </footer>
+    </body>
+
+</html>
