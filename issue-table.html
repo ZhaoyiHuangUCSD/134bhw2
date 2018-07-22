@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="./src/printstyle.css" type="text/css" media="print" />
-    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="./src/mobile.css" type="text/css" />
+    <link rel="stylesheet" href="./src/mobile.css" type="text/css" media="only screen and (max-width: 800px)"/>
     <meta charset="utf-8">
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>issue table</title>
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <title>Issue Table</title>
     <style>
         
         table{
@@ -58,7 +58,7 @@
             }
         
           function tooglepart(on){
-              var lst=document.getElementsByName("close");
+              var lst=document.getElementsByClassName("close");
             for (var i=0;i<lst.length;++i){
                 lst[i].style.display=on?'none':'';
               
@@ -66,12 +66,13 @@
           }
 
     </script>
-    <noscript>
-        <p>Your browser doesn't support Javascript. Please enable for optimal view.</p>
-    </noscript>
+
     
     </head>
     <body>
+        <noscript>
+            <p>Your browser doesn't support Javascript. Please enable for optimal view.</p>
+        </noscript>
         <h1 id="top"><b>Issue List</b></h1>
         <hr>
         <nav>
@@ -82,6 +83,13 @@
             <a href="#5">text</a> 
         </nav>
         <br>
+        
+        
+        
+        
+        <form action="./add.html" style="float: right">
+            <button type="submit">Add issue</button>
+        </form>
         <input type="checkbox" id="chop" onchange="showOpen();"/>Open issues only<br>
         
         <div style="overflow-x:auto;">
@@ -93,57 +101,60 @@
             <td>Issue Description</td>
            </tr>
            
-           <tr id="1" name="open" >
-           <td >1</td>
-               <td><a href="issue.html">Sections</a></td>
-               <td>Sections and formatting related tags</td>
-               <td>Explore tags related to sections like &lt;aside&gt; and &lt;article&gt; we also explore headings</td>
-               <td class="b"><input type="button" value="&times" onclick="deleteIssue(this)"></td>
-           </tr>
-           <tr id="2" name="close">
-           <td >2</td>
-               <td><a href="issue2.html">Image</a></td>
-               <td>Image related tags</td>
-               <td>Exploring tags related to images, using tags like &lt;pictures&gt;</td>
-           </tr>
-            
-           <tr id="3" name="close">
-           <td >3</td>
-               <td><a href="issue3.html">Media</a></td>
-               <td>Media related tags</td>
-               <td>Exploring media inside the webpage(besides images), elements explored includes iframe, video, and image map</td>
-           </tr>
-        
-            <tr id="4" name="open">
-           <td >4</td>
-                <td><a href="issue4.html">Forms and table</a></td>
-               <td>Tags related to forms and table</td>
-               <td>Exploring tags related to table, and form. Creating tables and forms from those</td>
+           <tr class="open" >
+                <td id="1">1</td>
+                    <td><a href="./issue.html">Sections</a></td>
+                    <td>Sections and formatting related tags</td>
+                    <td>Exploring tags related to sections like &lt;aside&gt; and &lt;article&gt;; we also explore headings</td>
+                    <td class="b">
+                    <form action="confirmation.html">       
+                        <noscript></noscript>
+                        <input type="submit" value="delete" onclick="deleteIssue(this)">
+                    </form>              
+                     </td>                 
+                 </tr>
+     
+                <tr class="close">
+                <td id="2">2</td>
+                    <td><a href="./issue2.html">Image</a></td>
+                    <td>Image related tags</td>
+                    <td>Exploring tags related to images, using tags like &lt;pictures&gt;</td>
+                </tr>
+                 
+                <tr class="close">
+                <td id="3">3</td>
+                    <td><a href="./issue3.html">Media</a></td>
+                    <td>Media related tags</td>
+                    <td>Exploring media inside the webpage(besides images); elements explored includes iframe, video, and image map</td>
+                </tr>
+             
+                 <tr class="open">
+                <td id="4">4</td>
+                     <td><a href="./issue4.html">Forms and table</a></td>
+                    <td>Tags related to forms and table</td>
+                    <td>Exploring tags related to table, and form. Creating tables and forms from those</td>
+                </tr>
+               
+                 <tr class="close">
+                <td id="5">5</td>
+                     <td><a href="./issue5.html">Inline text tags</a></td>
+                    <td>Inline tags exploration</td>
+                    <td>Exploring inline text</td>
+                </tr>
                 
-           </tr>
-          
-            <tr id="5" name="close">
-           <td >5</td>
-                <td><a href="issue5.html">Inline text tags</a></td>
-               <td>Inline tags exploration</td>
-               <td>Exploring inline text</td>
-           </tr> 
-           
-        </table>
-        <form action="./add.html" style="float: left">
-            <button type="submit">Add issue</button>
-        </form>
-        </div>
-    
-        <p id="bottom"><a  href="#top">go to top</a></p>
-    <footer>
-        <hr>
-        Copyright: &copy; Group Neko
-        <address>
-        9600 Gilman Drive<br> 
-        La Jolla, CA 92093<br>
-        </address>
-        </footer>
-    </body>
-
-</html>
+             </table>
+             </div>
+                 
+             <p id="bottom"><a  href="#top">go to top</a></p>
+         <footer>
+             <hr>
+             Copyright: &copy; Group Neko
+             <address>
+             9600 Gilman Drive<br> 
+             La Jolla, CA 92093<br>
+             </address>
+             </footer>
+         </body>
+     
+     </html>
+     
