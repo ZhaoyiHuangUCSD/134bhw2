@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="utf-8">
+    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'PT Serif', serif;
+        }
+        label{
+            color:deepskyblue;
+        }
+        hr{
+            border-width: 1px;
+            display:flex;
+            border-style: groove;
+        }
+        .close{
+            border:1px solid lightgrey;
+            padding: 3px;
+            margin:10px;
+        }
+    </style>
+    <title>WebP not supported </title>
+    </head>
+    <body>
+    <h1> Issue Name: Can't load webP in browsers</h1>
+    <h2> Issue Type: Error</h2>
+    <h2> Issue Description:</h2>
+        <p>Uploading a webP image liek this but browser does not support the image. Uploaded the original picture and result screenshot.</p>
+        <img src="img/tropical-sunrise.webp" alt="issue file" width="100%">
+        <img src="img/block.png" alt="issue file">
+        <br>
+        <b>Issue level:</b><label> Mid</label>
+        <div class="close">
+    <p>This issue has been resolved.</p>
+        <p><b>Solution:</b> For browsers support problem, The best way is to have some backup pictures for that webP. You can use &lt;picture&gt; with &lt;source&gt; tags inside denoting different picture. One for your webP another one for the backup picture in format browsers all support like jpeg or jpg </p>
+    </div>
+        
+               <hr>
+    <footer>
+            <small><i>Issue found by Group Neko</i></small>
+        </footer> 
+        
+    </body>
+    
+</html>
