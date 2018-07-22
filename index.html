@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-    <link ref="stylesheet" href="./src/mobile.css" type="text/css" media="print"/>
+    <link rel="stylesheet" media="only screen and (max-width: 800px)" href="./src/mobile.css" type="text/css" />
     <style>
      body{
             font-family: 'PT Serif', serif;
@@ -16,16 +16,17 @@
     padding: 15px;
     display: inline-block;
     border: none;
-    /*background: #f1f1f1;*/
+    background: #f1f1f1;
 }
         button{
             background-color: forestgreen;
             color:white;
             padding: 14px 20px;
-            margin:8px 0;
+            margin:8px 0px;
             border:none;
             width:auto;
             opacity: 0.9;
+            text-align: center;
         }
         button:hover{
             opacity: 1;
