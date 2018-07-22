@@ -20,6 +20,7 @@ input{
     height: 32px !important;
 }
 button{
+    max-width: 75%;
     height: 48px !important;
     background-color: forestgreen;
     color: white !important;
