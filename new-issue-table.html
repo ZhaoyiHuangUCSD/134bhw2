@@ -38,21 +38,13 @@
             background-color: lightgrey;
             font-style: italic;
         }
+        input[type="submit"]{
+            background-color: orangered;
+            font-size: 20px;
+        }
     </style>
     
     <script>
-    function addRow(){
-        var table= document.getElementById("mytable");
-        var row=table.insertRow();
-        var cell1=row.insertCell();
-        var cell2=row.insertCell();
-        var cell3 =row.insertCell();
-        var cell4=row.insertCell();
-        cell1.innerHTML="&nbsp";
-        cell2.innerHTML="&nbsp";
-        cell3.innerHTML="&nbsp";
-        cell4.innerHTML="&nbsp";
-    }
         
      function deleteIssue(){
             confirm("You sure you want to delete? CONFIRM TO CONTINUE")
@@ -107,7 +99,7 @@
         
         <input type="checkbox" id="chop" onchange="showOpen(this);"/>Open issues only<br>
         
-        <div style="overflow-x:auto;">
+        <div>
         <table id="mytable">
         <tr>
            <td>Issue Id</td>
@@ -123,8 +115,7 @@
                 <td>Error</td>
                 <td>The tag is not suppported by all browsers</td>
                 <td class="b">      
-                    <noscript></noscript>
-                    <input type="submit" value="delete" onclick="deleteIssue(this)" disabled>         
+                    <input type="submit" value="&times;" disabled>         
                  </td>                 
              </tr>
  

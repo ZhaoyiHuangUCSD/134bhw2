@@ -4,11 +4,14 @@
 <head>
     <link rel="stylesheet" href="./src/printstyle.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./src/mobile.css" type="text/css" media="only screen and (max-width: 800px)"/>
+     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>Issue Table</title>
     <style>
-        
+        body{
+            font-family: 'PT Serif', serif;
+        }
         table{
             width:100%;
             font-family: sans-serif;
@@ -22,7 +25,7 @@
             text-align: right;
         }
 
-        tr[name="close"]{
+        .close{
             background-color: lightgrey;
             font-style: italic;
         }
@@ -30,6 +33,10 @@
         .b{
             border: none !important;
             background-color: white;
+        }
+        input[type="submit"]{
+            background-color: orangered;
+            font-size: 20px;
         }
     </style>
     
@@ -92,13 +99,14 @@
         </form>
         <input type="checkbox" id="chop" onchange="showOpen();"/>Open issues only<br>
         
-        <div style="overflow-x:auto;">
+        <div>
         <table id="mytable">
         <tr>
            <td>Issue Id</td>
             <td>Issue Name</td>
             <td>Issue Type</td>
             <td>Issue Description</td>
+            <td class="b">&nbsp;</td>
            </tr>
            
            <tr class="open" >
@@ -108,8 +116,8 @@
                     <td>The tag is not suppported by all browsers</td>
                     <td class="b">
                     <form action="confirmation.html">       
-                        <noscript></noscript>
-                        <input type="submit" value="delete" onclick="deleteIssue(this)">
+                        
+                        <input type="submit" value="&times;">
                     </form>              
                      </td>                 
                  </tr>
@@ -119,6 +127,7 @@
                     <td><a href="./new-issue-2.html">Not valid encoding</a></td>
                     <td>Error</td>
                     <td>The character encoding was not declared when validating simple html file</td>
+                    <td class="b">&nbsp;</td>
                 </tr>
                  
                 <tr class="close">
@@ -126,6 +135,7 @@
                     <td><a href="./new-issue-3.html">Can't load webP in browsers</a></td>
                     <td>Error</td>
                     <td>Uploading a webP image but browser does not support the image.</td>
+                    <td class="b">&nbsp;</td>
                 </tr>
              
                  <tr class="open">
@@ -133,6 +143,7 @@
                      <td><a href="./new-issue-4.html">Media mobile doesn't support</a></td>
                     <td>Error</td>
                     <td>Validation error when uses a different style for mobile</td>
+                    <td class="b">&nbsp;</td>
                 </tr>
                
                  <tr class="close">
@@ -140,6 +151,7 @@
                      <td><a href="./new-issue-5.html">Border element obsolate</a></td>
                     <td>Error</td>
                     <td>Validator finds it is obsolate when directly set border in &lt;table&gt;</td>
+                    <td class="b">&nbsp;</td>
                 </tr>
                 
              </table>
