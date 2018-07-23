@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./src/printstyle.css" type="text/css" media="print" />
     <link rel="stylesheet" href="./src/mobile.css" type="text/css" media="only screen and (max-width: 800px)"/>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
     <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
     <title>Issue Table</title>
     <style>
@@ -33,6 +33,10 @@
         .b{
             border: none !important;
             background-color: white;
+        }
+        .close{
+            background-color: lightgrey;
+            font-style: italic;
         }
     </style>
     
@@ -110,6 +114,7 @@
             <td>Issue Name</td>
             <td>Issue Type</td>
             <td>Issue Description</td>
+            <td class="b">&nbsp;</td>
            </tr>
            
            <tr class="open" >
@@ -128,6 +133,7 @@
                 <td><a href="./new-issue-2.html">Not valid encoding</a></td>
                 <td>Error</td>
                 <td>The character encoding was not declared when validating simple html file</td>
+                <td class="b">&nbsp;</td>
             </tr>
              
             <tr class="close">
@@ -135,6 +141,7 @@
                 <td><a href="./new-issue-3.html">Can't load webP in browsers</a></td>
                 <td>Error</td>
                 <td>Uploading a webP image but browser does not support the image.</td>
+                <td class="b">&nbsp;</td>
             </tr>
          
              <tr class="open">
@@ -142,6 +149,7 @@
                  <td><a href="./new-issue-4.html">Media mobile doesn't support</a></td>
                 <td>Error</td>
                 <td>Validation error when uses a different style for mobile</td>
+                 <td class="b">&nbsp;</td>
             </tr>
            
              <tr class="close">
@@ -149,6 +157,7 @@
                  <td><a href="./new-issue-5.html">Border element obsolate</a></td>
                 <td>Error</td>
                 <td>Validator finds it is obsolate when directly set border in &lt;table&gt;</td>
+                 <td class="b">&nbsp;</td>
             </tr>
 
             <tr class="open">
@@ -156,6 +165,7 @@
                 <td><a href="./new-issue.html">New Issue Placeholder</a></td>
                 <td>Your New Issue Under Review</td>
                 <td>We have accepted your submission(s)! Our team will go over the issue(s) you added and post it/them here in due time!</td>
+                <td class="b">&nbsp;</td>
             </tr> 
            
         </table>
