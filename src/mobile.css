@@ -58,9 +58,7 @@ iframe,embed,video,audio,object{
         font-weight: bold;
         page-break-inside: avoid;
     }
-    a[href$=".html"]:after {
-      content:" < " attr(href) "> ";
-}
+
     nav{
         display: none;
     }
