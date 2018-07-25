@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./src/mobile.css" type="text/css" media="only screen and (max-width: 800px)"/>
      <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
-    <meta name="viewpoint" content="width-device-width, initial-scale=1.0">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <title>Issue Table</title>
     <style>
         body{
@@ -87,8 +87,11 @@
         
         
         
-        <form action="./add.html" style="float: right">
+        <form action="./add.html" style="float: left">
             <button type="submit">Add issue</button>
+        </form>
+        <form action="./add.html" style="float: left">
+            <button type="submit">Edit issue</button>
         </form>
         <input type="checkbox" id="chop" onchange="showOpen();"/>Open issues only<br>
         
@@ -110,7 +113,7 @@
                     <td class="b">
                     <form action="confirmation.html">       
                         
-                        <input type="submit" value="&times;">
+                        <input type="submit" value="&times;" style="text-align: center">
                     </form>              
                      </td>                 
                  </tr>
